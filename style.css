@@ -1,0 +1,147 @@
+/* --- Tailwind & Custom Styles merged --- */
+:root {
+  --background: #fff;
+  --foreground: #000;
+  --card: #fff;
+  --card-foreground: #000;
+  --popover: #fff;
+  --popover-foreground: #000;
+  --teal-blue: #2A6D8E;
+  --bright-red: #E63946;
+  --bright-yellow: #FFD100;
+  --purple: #9B5DE5;
+  --light-blue: #4CC9F0;
+  --green: #4CAF50;
+  --orange: #FFA500;
+  --primary: #2A6D8E;
+  --primary-foreground: #fff;
+  --secondary: #E3EAF0;
+  --secondary-foreground: #2A6D8E;
+  --muted: #E3EAF0;
+  --muted-foreground: #6C7A89;
+  --accent: #E63946;
+  --accent-foreground: #fff;
+  --destructive: #E63946;
+  --destructive-foreground: #fff;
+  --border: #E3EAF0;
+  --input: #E3EAF0;
+  --ring: #2A6D8E;
+  --radius: 0.5rem;
+  --gradient-hero: linear-gradient(135deg, #2A6D8E, rgba(42,109,142,0.8));
+  --gradient-accent: linear-gradient(135deg, #E63946, #FFA500);
+  --shadow-card: 0 4px 6px -1px rgba(42,109,142,0.1), 0 2px 4px -1px rgba(42,109,142,0.06);
+  --shadow-hover: 0 10px 15px -3px rgba(42,109,142,0.1), 0 4px 6px -2px rgba(42,109,142,0.05);
+  --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif;
+}
+
+.gradient-hero {
+  background: var(--gradient-hero);
+}
+
+.gradient-accent {
+  background: var(--gradient-accent);
+}
+
+.shadow-card {
+  box-shadow: var(--shadow-card);
+}
+
+.shadow-hover {
+  box-shadow: var(--shadow-hover);
+}
+
+.transition-smooth {
+  transition: var(--transition-smooth);
+}
+
+.scroll-smooth {
+  scroll-behavior: smooth;
+}
+
+.pin-icon {
+  width: 24px;
+  height: 24px;
+  border-radius: 50% 50% 50% 0;
+  transform: rotate(-45deg);
+  position: relative;
+}
+
+.pin-icon::before {
+  content: '';
+  width: 12px;
+  height: 12px;
+  background: white;
+  border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.hover-zoom {
+  transition: transform 0.3s ease;
+}
+
+.hover-zoom:hover {
+  transform: scale(1.05);
+}
+
+/* Utility classes from Tailwind (subset) */
+.text-xl { font-size: 1.25rem; }
+.font-bold { font-weight: bold; }
+.text-primary { color: var(--primary); }
+.text-primary-foreground { color: var(--primary-foreground); }
+.text-muted-foreground { color: var(--muted-foreground); }
+.text-background { color: var(--background); }
+.text-bright-yellow { color: var(--bright-yellow); }
+.bg-primary { background: var(--primary); }
+.bg-bright-red { background: var(--bright-red); }
+.bg-white { background: #fff; }
+.bg-card { background: var(--card); }
+.bg-secondary { background: var(--secondary); }
+.bg-purple { background: var(--purple); }
+.bg-light-blue { background: var(--light-blue); }
+.bg-green { background: var(--green); }
+.bg-orange { background: var(--orange); }
+.bg-teal-blue { background: var(--teal-blue); }
+.bg-bright-yellow { background: var(--bright-yellow); }
+.border-bright-red { border-color: var(--bright-red); }
+.border-muted { border-color: var(--muted); }
+.rounded { border-radius: var(--radius); }
+.shadow-2xl { box-shadow: 0 25px 50px -12px rgba(42,109,142,0.25); }
+.container { max-width: 1200px; margin: 0 auto; }
+.px-4 { padding-left: 1rem; padding-right: 1rem; }
+.py-4 { padding-top: 1rem; padding-bottom: 1rem; }
+.pt-20 { padding-top: 5rem; }
+.pb-16 { padding-bottom: 4rem; }
+.space-y-2 > * + * { margin-top: 0.5rem; }
+.space-y-4 > * + * { margin-top: 1rem; }
+.space-y-8 > * + * { margin-top: 2rem; }
+.space-x-4 > * + * { margin-left: 1rem; }
+.grid { display: grid; }
+.gap-8 { gap: 2rem; }
+.md\:grid-cols-2 { grid-template-columns: repeat(2, 1fr); }
+.lg\:grid-cols-2 { grid-template-columns: repeat(2, 1fr); }
+.lg\:grid-cols-3 { grid-template-columns: repeat(3, 1fr); }
+.max-w-md { max-width: 28rem; }
+.w-full { width: 100%; }
+.h-auto { height: auto; }
+.mt-8 { margin-top: 2rem; }
+.pt-8 { padding-top: 2rem; }
+.text-center { text-align: center; }
+.mb-4 { margin-bottom: 1rem; }
+.mb-6 { margin-bottom: 1.5rem; }
+.py-12 { padding-top: 3rem; padding-bottom: 3rem; }
+.p-6 { padding: 1.5rem; }
+.p-4 { padding: 1rem; }
+.px-8 { padding-left: 2rem; padding-right: 2rem; }
+.py-6 { padding-top: 1.5rem; padding-bottom: 1.5rem; }
+.mt-6 { margin-top: 1.5rem; }
+.border { border: 1px solid #E3EAF0; }
+/* ...add more as needed for your layout */
