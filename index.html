@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>The Guitar Atlas</title>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body class="min-h-screen scroll-smooth bg-background text-foreground" style="font-family:'Inter',sans-serif;">
+  <!-- Header -->
+  <header class="fixed w-full z-50 transition-all duration-300 bg-primary/95 py-4">
+    <div class="container mx-auto px-4">
+      <nav class="flex items-center justify-between">
+        <div class="text-xl font-bold text-primary-foreground">THE GUITAR ATLAS</div>
+        <div class="hidden md:flex space-x-8">
+          <button onclick="scrollToSection('hero')" class="text-primary-foreground hover:text-bright-yellow transition-colors duration-300 capitalize">Hero</button>
+          <button onclick="scrollToSection('about')" class="text-primary-foreground hover:text-bright-yellow transition-colors duration-300 capitalize">About</button>
+          <button onclick="scrollToSection('perks')" class="text-primary-foreground hover:text-bright-yellow transition-colors duration-300 capitalize">Perks</button>
+          <button onclick="scrollToSection('contents')" class="text-primary-foreground hover:text-bright-yellow transition-colors duration-300 capitalize">Contents</button>
+          <button onclick="scrollToSection('book-call')" class="text-primary-foreground hover:text-bright-yellow transition-colors duration-300 capitalize">Book a Call</button>
+        </div>
+        <button class="bg-bright-red text-white border-bright-red hover:bg-bright-red/90 px-4 py-2 rounded" onclick="scrollToSection('hero')">Buy Now</button>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section id="hero" class="pt-20 pb-16 gradient-hero text-white">
+    <div class="container mx-auto px-4">
+      <div class="grid lg:grid-cols-2 gap-12 items-center">
+        <div class="space-y-8">
+          <div class="space-y-4">
+            <h1 class="text-4xl md:text-6xl font-bold leading-tight">
+              The Ultimate Roadmap of the Fretboard
+            </h1>
+            <p class="text-xl md:text-2xl text-white/90">
+              Unlock 1000+ chord shapes and 100+ scales with our visual learning system.
+              <span class="text-bright-yellow font-semibold"> Limited time: Get 15% OFF today!</span>
+            </p>
+          </div>
+          <div class="space-y-4">
+            <h3 class="text-lg font-semibold text-bright-yellow">Key Features:</h3>
+            <ul class="space-y-2 text-white/90">
+              <li class="flex items-center"><span class="w-2 h-2 bg-bright-yellow rounded-full mr-3"></span>Visual fretboard mapping system</li>
+              <li class="flex items-center"><span class="w-2 h-2 bg-bright-yellow rounded-full mr-3"></span>1000+ chord shapes across all positions</li>
+              <li class="flex items-center"><span class="w-2 h-2 bg-bright-yellow rounded-full mr-3"></span>100+ scales with pattern connections</li>
+              <li class="flex items-center"><span class="w-2 h-2 bg-bright-yellow rounded-full mr-3"></span>Progressive learning roadmap</li>
+            </ul>
+          </div>
+          <div class="flex flex-col sm:flex-row gap-4">
+            <button class="bg-bright-red hover:bg-bright-red/90 text-white text-lg px-8 py-6 rounded">Buy Now (15% OFF)</button>
+            <button class="border-white text-white hover:bg-white hover:text-primary text-lg px-8 py-6 rounded" onclick="scrollToSection('contents')">Preview Contents →</button>
+          </div>
+        </div>
+        <div class="flex justify-center">
+          <div class="max-w-md w-full">
+            <img src="https://res.cloudinary.com/your_cloud/image/upload/v1690000000/book-cover.jpg" alt="The Guitar Atlas Book Cover" class="w-full h-auto shadow-2xl rounded-lg hover-zoom"/>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- About Me Section -->
+  <section id="about" class="py-16 bg-card text-card-foreground">
+    <div class="container mx-auto px-4">
+      <h2 class="text-3xl font-bold mb-6">About the Author</h2>
+      <p class="text-lg mb-4">Jarrett Owens is passionate about helping guitarists unlock their full potential. With years of teaching and performing experience, he’s developed a unique, visual system for mastering the fretboard.</p>
+      <p class="text-muted-foreground">Join thousands who’ve transformed their playing!</p>
+    </div>
+  </section>
+
+  <!-- Perks Section -->
+  <section id="perks" class="py-16 bg-secondary">
+    <div class="container mx-auto px-4">
+      <div class="space-y-8">
+        <h2 class="text-3xl font-bold text-primary mb-4">Why Choose The Guitar Atlas?</h2>
+        <p class="text-xl text-muted-foreground max-w-3xl mx-auto">Discover the benefits that make this the most comprehensive fretboard learning system available</p>
+      </div>
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mt-8">
+        <div class="bg-purple p-6 rounded-lg shadow-card text-white">
+          <h3 class="font-bold mb-2">Visual Learning System</h3>
+          <p>See patterns and connections across the entire fretboard with our unique visual approach</p>
+        </div>
+        <div class="bg-light-blue p-6 rounded-lg shadow-card text-white">
+          <h3 class="font-bold mb-2">Complete Chord Library</h3>
+          <p>Access 1000+ chord shapes with fingering diagrams and position variations</p>
+        </div>
+        <div class="bg-green p-6 rounded-lg shadow-card text-white">
+          <h3 class="font-bold mb-2">Scale Mastery</h3>
+          <p>Master 100+ scales with pattern recognition and connecting shapes</p>
+        </div>
+        <div class="bg-orange p-6 rounded-lg shadow-card text-white">
+          <h3 class="font-bold mb-2">Progressive Roadmap</h3>
+          <p>Follow a structured path from beginner to advanced with clear milestones</p>
+        </div>
+        <div class="bg-teal-blue p-6 rounded-lg shadow-card text-white">
+          <h3 class="font-bold mb-2">Instant Reference</h3>
+          <p>Quickly find any chord or scale shape you need</p>
+        </div>
+        <div class="bg-bright-yellow p-6 rounded-lg shadow-card text-foreground">
+          <h3 class="font-bold mb-2">Bonus Materials</h3>
+          <p>Exclusive online resources to accelerate your progress</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contents Section -->
+  <section id="contents" class="py-16 bg-card text-card-foreground">
+    <div class="container mx-auto px-4">
+      <h2 class="text-3xl font-bold mb-6">Inside the Book</h2>
+      <ul class="list-disc pl-6 text-lg">
+        <li>1000+ Chord Shapes</li>
+        <li>100+ Scales with Visual Patterns</li>
+        <li>Step-by-Step Roadmaps</li>
+        <li>Exclusive bonus materials</li>
+      </ul>
+      <button class="bg-white text-primary hover:bg-white/90 text-lg px-8 py-6 rounded mt-6 border" onclick="scrollToSection('book-call')">Schedule Your Free Consultation</button>
+    </div>
+  </section>
+
+  <!-- Book a Call Section -->
+  <section id="book-call" class="py-16 bg-secondary">
+    <div class="container mx-auto px-4">
+      <h2 class="text-3xl font-bold mb-6 text-primary">Book a Free Call</h2>
+      <p class="text-lg mb-4">Get personalized guidance and answers to all your questions!</p>
+      <form class="max-w-xl mx-auto space-y-6">
+        <input type="text" name="name" placeholder="Your Name" class="w-full p-4 border rounded bg-background text-foreground"/>
+        <input type="email" name="email" placeholder="Your Email" class="w-full p-4 border rounded bg-background text-foreground"/>
+        <textarea name="message" placeholder="Your Message" class="w-full p-4 border rounded bg-background text-foreground"></textarea>
+        <button type="submit" class="bg-bright-red text-white px-8 py-4 rounded hover:bg-bright-red/90">Book Now</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-foreground text-background py-12">
+    <div class="container mx-auto px-4">
+      <div class="grid md:grid-cols-3 gap-8">
+        <div>
+          <h3 class="text-xl font-bold mb-4">The Guitar Atlas</h3>
+          <p class="text-muted-foreground">The ultimate visual roadmap to fretboard mastery by Jarrett Owens.</p>
+        </div>
+        <div>
+          <h3 class="text-lg font-semibold mb-4">Quick Links</h3>
+          <div class="space-y-2">
+            <button class="block text-muted-foreground hover:text-background transition-colors" onclick="scrollToSection('about')">About</button>
+            <button class="block text-muted-foreground hover:text-background transition-colors" onclick="scrollToSection('contents')">Contents</button>
+            <button class="block text-muted-foreground hover:text-background transition-colors" onclick="scrollToSection('book-call')">Book a Call</button>
+          </div>
+        </div>
+        <div>
+          <h3 class="text-lg font-semibold mb-4">Connect</h3>
+          <div class="space-y-2">
+            <p class="text-muted-foreground">Follow the journey:</p>
+            <div class="flex space-x-4">
+              <a href="#" class="text-muted-foreground hover:text-background transition-colors">Instagram</a>
+              <a href="#" class="text-muted-foreground hover:text-background transition-colors">YouTube</a>
+              <a href="#" class="text-muted-foreground hover:text-background transition-colors">Facebook</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="border-t border-muted mt-8 pt-8 text-center">
+        <p class="text-muted-foreground">&copy; 2024 Jarrett Owens. All rights reserved. | The Guitar Atlas</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
